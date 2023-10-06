@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+
+//OPPGAVE 1
+//UI, HTML, CSS, JS
+
+
+//HTML:
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+
+    <style>
+        .errorText{
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<h1>Form:</h1>
+
+//form for sending input in
+//everything has requiered in the input tags
+
+<form>
+    //Name
+
+    <label> First name: </label>
+    <input type="text" name="firstName" id="firstName" required >
+    //If not valid:
+
+    <span class="errorText" id="errorTextFirstName"> </span>
+
+    <br>
+
+
+
+
+
+    //Surename
+
+    <label> Surname: </label>
+    <input type="text" name="sureName" id="sureName" required>
+    //If not valid:
+
+    <span class="errorText" id="errorTextLastName"> </span>
+
+    <br>
+
+    //Date of birth
+
+    <label> Date of birth: </label>
+    <input type="DATE" name="DOB" id="DOB" required>
+    //If not valid:
+
+    <span  class="errorText" id="errorTextDOB"> </span>
+
+    <br>
+
+    //Sosial security number
+
+    <label> Sosial security number: </label>
+    <input type="number" name="SSN" id="SSN" required minlenght="11" maxlenght="11"  >
+    //If not valid:
+
+    <span class="errorText" id="errorTextSSN"> </span>
+
+    <br>
+
+
+    //phone number
+
+    <label> Phone number: </label>
+    <input type="number" name="phoneNr" id="phoneNr" onchange="validatePhoneNumber(this.value)" required >
+    //If not valid:
+
+    <span class="errorText" id="errorTextPhoneNr"> </span>
+
+    <br>
+
+
+    //email adress
+
+    <label> Email: </label>
+    <input type="email" name="email" id="email" onchange="validateEmail(this.value)" required>
+    //If not valid:
+
+    <span class="errorText" id="errorTextEmail"> </span>
+
+    <br>
+
+
+    //City
+
+    <label> City: </label>
+    <input type="text" name="city" id="city" required >
+    //If not valid:
+
+    <span class="errorText" id="errorTextFirstCity"> </span>
+
+    <br>
+
+
+    //street
+
+    <label> Street: </label>
+    <input type="text" name="street" id="street"  required>
+    //If not valid:
+
+    <span class="errorText" id="errorTextStreet"> </span>
+
+    <br>
+
+
+    //button to send it in!
+
+    <button id="saveCitizen" onClcik="saveCitizen()"> Send in </button>
+
+</form>
+
+
+//to show the citizens:
+<div id=citizens> </div>
+
+
+
+
+//JS Validation for email and phone number
+
+<script>
+    function validateEmail(email){
+
+        const regxp = /^[a-zA-Z0-9._%&+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        const ok = regexp.test(name);
+
+        if(!ok){
+        $("errorTextEmail").html("Not valid email");
+            return false;
+        }
+        else{
+        $("errorTextEmail").html("");
+            return true;
+        }
+    }
+
+
+    function validatePhoneNumber(phoneNumber) {
+
+        const regxp = /^[0-9]{8}$/;
+
+        const ok = regexp.test(phoneNumber);
+
+        if (!ok) {
+        $("errorTextPhoneNumber").html("Not valid phone number");
+            return false;
+        } else {
+        $("errorTextPhoneNumber").html("");
+            return true;
+        }
+
+    }
+</script>
+</body>
+</html>
+</html>
