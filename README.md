@@ -12,6 +12,10 @@ Ordinær Eksamen i  Webprogrammering (DATA1700)
 
 **Vurderingsform**: Skriftlig eksamen under tilsyn
 
+**NB**: * *This exam was written on a white sheet and there was no possibility to check and run the program. Therefore, there are still many typos and some syntax errors which mean that the program will not run, but the task was assessed on other price points than just that the program should run.* *
+
+
+
 ## Oppgaver
 
 In recent years there has been an european trend for digitalisation of the local administrations and government entities. This trend was definitely more noticeable in the east, where countries that were left behind in the IT infrastructure started investing massively. In this scenario you are one of the developers responsible for developing a new simple management system for citizens where they can register their details.
